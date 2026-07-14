@@ -1,20 +1,19 @@
-# Image Slider with Thumbnails
+# 🖼️ Interactive Image Slider
 
-A responsive and interactive image slider web application. It allows users to navigate through a collection of images using navigation buttons or by clicking on dynamic thumbnails.
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Frontend](https://img.shields.io/badge/Frontend-UI-green?style=for-the-badge)
 
-## Features
-- **Navigation Controls**: "Previous" and "Next" buttons to cycle through images.
-- **Dynamic Thumbnails**: Automatically generated thumbnails for all images in the slider.
-- **Active State Tracking**: Highlights the current image and its corresponding thumbnail.
-- **Smart Controls**: The navigation buttons automatically disable when reaching the start or end of the gallery.
-- **Image Indexing**: Displays the current image number relative to the total count (e.g., "Image 1 of 8").
+A professional-grade image slider designed for modern web galleries. This project showcases advanced DOM manipulation and dynamic thumbnail generation for an enhanced user experience.
 
-## Technologies Used
-- HTML5
-- CSS3 (Custom Grid and Flexbox Layouts)
-- JavaScript (DOM Manipulation and Event Handling)
+## 🚀 Key Features
+- **Dual Navigation**: Use traditional "Prev/Next" buttons or jump directly to an image via thumbnails.
+- **Dynamic Thumbnails**: Automatically scales and generates thumbnails for any number of images.
+- **Smart Logic**: Buttons intelligently disable at the start/end of the collection.
+- **Active State UI**: Visual feedback for currently selected images and thumbnails.
 
-## How to Run
-1. Clone the repository.
-2. Ensure the `imgs/` directory contains the required images (`01.jpg` to `08.jpg`).
-3. Open `index.html` in your web browser.
+## 🛠️ Installation & Usage
+1. Clone the repository: `git clone https://github.com/9gkc/image-slider-thumbnails.git`
+2. Open `index.html` to view the gallery.
+
+---
