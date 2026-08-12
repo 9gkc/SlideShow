@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project</title>
+    <title>Accessible Image Slider</title>
     <link rel="stylesheet" href="main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,23 +12,25 @@
       rel="stylesheet" />
   </head>
   <body>
-    <h1>Image Slider With Thumbnails</h1>
-    <div class="slider-container">
-      <button class="prev-btn">Previous</button>
-      <div class="slider">
-        <div class="img-id">Image 1</div>
-        <img class="active" src="imgs/01.jpg" alt="Image 1" />
-        <img src="imgs/02.jpg" alt="Image 2" />
-        <img src="imgs/03.jpg" alt="Image 3" />
-        <img src="imgs/04.jpg" alt="Image 4" />
-        <img src="imgs/05.jpg" alt="Image 5" />
-        <img src="imgs/06.jpg" alt="Image 6" />
-        <img src="imgs/07.jpg" alt="Image 7" />
-        <img src="imgs/08.jpg" alt="Image 8" />
-      </div>
-      <button class="next-btn">Next</button>
-    </div>
-    <div class="gallery-container"></div>
+    <main>
+      <h1>Image Slider With Thumbnails</h1>
+      <section class="slider-container" aria-label="Image gallery">
+        <button type="button" class="prev-btn" aria-label="Show previous image">Previous</button>
+        <div class="slider" tabindex="0" aria-label="Main image viewer">
+          <div class="img-id" role="status" aria-live="polite">Image 1 of 8</div>
+          <img class="active" src="imgs/01.jpg" alt="Gallery image 1" />
+          <img src="imgs/02.jpg" alt="Gallery image 2" aria-hidden="true" />
+          <img src="imgs/03.jpg" alt="Gallery image 3" aria-hidden="true" />
+          <img src="imgs/04.jpg" alt="Gallery image 4" aria-hidden="true" />
+          <img src="imgs/05.jpg" alt="Gallery image 5" aria-hidden="true" />
+          <img src="imgs/06.jpg" alt="Gallery image 6" aria-hidden="true" />
+          <img src="imgs/07.jpg" alt="Gallery image 7" aria-hidden="true" />
+          <img src="imgs/08.jpg" alt="Gallery image 8" aria-hidden="true" />
+        </div>
+        <button type="button" class="next-btn" aria-label="Show next image">Next</button>
+      </section>
+      <div class="gallery-container" aria-label="Image thumbnails"></div>
+    </main>
     <script src="main.js"></script>
   </body>
 </html>

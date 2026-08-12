@@ -17,10 +17,12 @@ A professional-grade image slider designed for modern web galleries. This projec
 - **Dual Navigation**: Use traditional "Prev/Next" buttons or jump directly to an image via thumbnails.
 - **Dynamic Thumbnails**: Automatically scales and generates thumbnails for any number of images.
 - **Smart Logic**: Buttons intelligently disable at the start/end of the collection.
+- **Keyboard Navigation**: Focus the image viewer and use the left/right arrow keys.
+- **Accessible Status**: The active image and counter are announced to assistive technologies.
 - **Active State UI**: Visual feedback for currently selected images and thumbnails.
 
 ## 🛠️ Installation & Usage
-1. Clone the repository: `git clone https://github.com/9gkc/image-slider-thumbnails.git`
+1. Clone the repository: `git clone https://github.com/9gkc/SlideShow.git`
 2. Open `index.html` to view the gallery.
 
 ---
