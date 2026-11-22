@@ -8,8 +8,8 @@ let currentSlide = 0;
 
 function updateSliderControls() {
   if (!slides.length) return;
-  if (prevButton) prevButton.disabled = currentSlide === 0;
-  if (nextButton) nextButton.disabled = currentSlide === slides.length - 1;
+  if (prevButton) prevButton.disabled = false;
+  if (nextButton) nextButton.disabled = false;
   if (imageCounter) imageCounter.textContent = `Image ${currentSlide + 1} of ${slides.length}`;
   slides.forEach((image, index) => {
     const isActive = index === currentSlide;
@@ -21,7 +21,8 @@ function updateSliderControls() {
 
 function goToSlide(index) {
   if (!slides.length) return;
-  currentSlide = Math.max(0, Math.min(index, slides.length - 1));
+  const total = slides.length;
+  currentSlide = ((index % total) + total) % total;
   updateSliderControls();
 }
 
@@ -55,8 +56,14 @@ function buildThumbnails() {
 prevButton?.addEventListener("click", () => goToSlide(currentSlide - 1));
 nextButton?.addEventListener("click", () => goToSlide(currentSlide + 1));
 slider?.addEventListener("keydown", (event) => {
-  if (event.key === "ArrowLeft") goToSlide(currentSlide - 1);
-  if (event.key === "ArrowRight") goToSlide(currentSlide + 1);
+  if (event.key === "ArrowLeft") {
+    event.preventDefault();
+    goToSlide(currentSlide - 1);
+  }
+  if (event.key === "ArrowRight") {
+    event.preventDefault();
+    goToSlide(currentSlide + 1);
+  }
 });
 
 if (slides.length > 0) {
